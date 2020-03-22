@@ -17,11 +17,14 @@
     <!-- Demo GPD -->
 
     <div class="demo-container">
-      <h2>GDP per capita (PPP)</h2>
+      <h2>Confirmed Cases and Deaths</h2>
 
       <div id="svgMapGPD"></div>
-      <script src="src/svgmap/data/gdp.js"></script>
+      <script src="src/svgmap/data/corona.js"></script>
       <script>
+        fetch("src/svgmap/data/corona.json")
+          .then(response => response.json())
+          .then(json => console.log(json))
         new svgMap({
           targetElementID: 'svgMapGPD',
           data: svgMapDataGPD
