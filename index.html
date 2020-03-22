@@ -24,11 +24,13 @@
       <script>
         fetch("src/svgmap/data/corona.json")
           .then(response => response.json())
-          .then(json => console.log(json))
-        new svgMap({
-          targetElementID: 'svgMapGPD',
-          data: svgMapDataGPD
-        });
+          .then(json => {
+            svgMapDataGPD.values = json;
+            new svgMap({
+              targetElementID: 'svgMapGPD',
+              data: svgMapDataGPD
+            });
+          })
       </script>
     </div>
 
