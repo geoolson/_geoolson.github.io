@@ -17,7 +17,13 @@
     <div class="container">
       <h1>Covid-19</h1>
       <h2>Confirmed Cases</h2>
-
+      
+      <select id="applyData" onChange="applyData()">
+        <option value="totalCases">Total Cases</option>
+        <option value="casesPerCapita">Cases per million</option>
+        <option value="active">Active Cases</option>
+        <option value="newCases">New Cases</option>
+      </select>
       <div id="svgMapGPD"></div>
       <script src="src/svgmap/data/corona.js"></script>
       <script>
@@ -25,11 +31,19 @@
           .then(response => response.json())
           .then(json => {
             svgMapDataGPD.values = json;
-            new svgMap({
+            map = new svgMap({
               targetElementID: 'svgMapGPD',
               data: svgMapDataGPD
             });
           })
+        const applyData = () => {
+          document.getElementById('svgMapGPD').innerHTML = '';
+          svgMapDataGPD.applyData = document.getElementById("applyData").value;
+          new svgMap({
+            targetElementID: 'svgMapGPD',
+            data: svgMapDataGPD
+          });
+        }
       </script>
     </div>
 
