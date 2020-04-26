@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="/portfoio.js"></script>
+  </head>
+  <body>
+      <header>
+        <div class="header-content">
+          <div class="nav">
+            <div class="nav-links"><a href="/">Home</a></div>
+            <div class="nav-links"><a href="/about.html">About</a></div>
+            <div class="nav-links">
+              <div>Projects
+                <ul class="dropdown">
+                  <li><a href="https://robotics.ece.pdx.edu/projects/index.php?name=Humanoid%20Robot%20KHR-1">KHR1</a></li>
+                  <li><a href="https://geoolson.github.io">Covid-19 US-heatmap</a></li>
+                  <li><a href="/drawbot.html">Drawbot</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-links"><a href="/contact.html">Contact</a></div>
+          </div>
+          <h1>Geoffrey Olson Jr.</h1>
+        </div>
+      </header>
+      <section class="content">
+          <h2>Drawbot</h2>
+          <figure>
+            <img src="assets/drawbot.png" alt="drawbotSite">
+            <figcaption>Drawbot Canvas for control</figcaption>
+          </figure>
+          <p>Drawbot is an RC car that follows a path you draw on a canvas in your webbrowser.
+             I built drawbot using a rapsberry pi nano wireless. The raspberry pi is running a node server hosting a web-site
+             over the lan its connected to. You connect your device to the same local network and you can control the robot remotely
+             with a gamepad controller or by drawing on the canvas. The gamepad functionality comes from the use of the browser's gamepad API. The
+             node server uses a web-socket to communicate to the user allowing realtime control of the bot over wifi. The node server
+             also uses a library for accessing the GPIO pins on the board for controlling two DC motors. 
+          </p>
+      </section>
+  </body>
+</html>

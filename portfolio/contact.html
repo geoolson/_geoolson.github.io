@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="/portfoio.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="nav">
+                <div class="nav-links"><a href="/">Home</a></div>
+                <div class="nav-links"><a href="/about.html">About</a></div>
+                <div class="nav-links">
+                    <div>Projects
+                        <ul class="dropdown">
+                        <li><a href="https://robotics.ece.pdx.edu/projects/index.php?name=Humanoid%20Robot%20KHR-1">KHR1</a></li>
+                        <li><a href="https://geoolson.github.io">Covid-19 US-heatmap</a></li>
+                        <li><a href="/drawbot.html">Drawbot</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-links"><a href="/contact.html">Contact</a></div>
+            </div>
+            <h1>Geoffrey Olson Jr.</h1>
+        </div>
+    </header>
+    <section class="content">
+        <h2>Contact Me</h2>
+        <div class="links">
+            <a href="mailto:geoolson@pdx.edu"> 
+                <i class="fas fa-envelope fa-3x"></i>
+                <p>Email</p>
+            </a>
+            <a href="https://www.linkedin.com/in/geoffrey-olson-jr-247097148/"> 
+                <i class="fab fa-linkedin fa-3x"></i>
+                <p>Linkedin</p>
+            </a>
+            <a href="https://www.github.com/geoolson"> 
+                <i class="fab fa-github-square fa-3x"></i>
+                <p>Github</p>
+            </a>
+            <a href="https://discordapp.com/channels/@5976"> 
+                <i class="fab fa-discord fa-3x"></i>
+                <p>Discord</p>
+            </a>
+        </div>
+        <form>
+            <label for="email" required>Your email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Message</label>
+            <textarea rows="5" id="message" name="message" required></textarea>
+            <input type="submit">
+        </form>
+    </section>
+</body>
+
+</html>
